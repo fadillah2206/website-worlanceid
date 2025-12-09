@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi Pengajuan Lowongan - WorkLance ID</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya spesifik untuk halaman verifikasi */
+        .verification-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .verification-container h1 {
+            color: #28a745; /* Hijau untuk sukses */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .info-box {
+            background-color: #e9f5ff;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            border-radius: 5px;
+        }
+        .info-box strong {
+            color: #007bff;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">WorkLance ID</a> 
+            <div class="nav-links">
+                <a href="index.html" data-lang-key="home">Beranda</a>
+                <a href="tentang.html" data-lang-key="about">Tentang Kami</a>
+                <a href="kontak.html" data-lang-key="contact">Kontak</a>
+                <a href="pasang_loker.html" class="active" data-lang-key="post_job">Pasang Loker</a> 
+                <button id="lang-switch" onclick="toggleLanguage()" style="
+                    background: #f8f9fa; 
+                    border: 1px solid #ccc; 
+                    padding: 5px 10px; 
+                    margin-left: 15px; 
+                    border-radius: 5px; 
+                    cursor: pointer;
+                    color: #007bff; 
+                    font-weight: bold;
+                ">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="verification-container">
+            <h1 data-lang-key="verif_h1">✅ Pengajuan Lowongan Berhasil Diterima!</h1>
+            <p data-lang-key="verif_p1">Terima kasih telah memasang lowongan di **WorkLance ID**.</p>
+            
+            <div class="info-box">
+                <strong data-lang-key="verif_info_title">Proses Verifikasi:</strong>
+                <p data-lang-key="verif_info_text">Lowongan Anda saat ini sedang dalam proses peninjauan oleh tim Admin kami. Proses ini biasanya memakan waktu maksimal 1x24 jam kerja.</p>
+                <p data-lang-key="verif_info_note">Kami akan menghubungi Anda melalui email rekrutmen yang dicantumkan jika ada informasi yang perlu diklarifikasi.</p>
+            </div>
+            
+            <p data-lang-key="verif_p2">Anda dapat kembali ke beranda untuk melihat lowongan lain yang tersedia.</p>
+            <a href="index.html" class="back-button" data-lang-key="verif_button">Kembali ke Beranda</a>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">&copy; 2025 WorkLance ID | Tugas Kelompok Mata Kuliah Web Development</p> 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

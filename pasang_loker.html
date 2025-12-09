@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasang Lowongan - WorkLance ID</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya Kritis untuk Memuat Gambar Latar di Header */
+        .main-header {
+            background-image: url('web.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+            padding: 40px 0;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .job-post-container {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .form-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-card h2 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-card h3 {
+            color: #343a40;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .publish-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .publish-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">WorkLance ID</a>
+            <div class="nav-links">
+                <a href="index.html" data-lang-key="home">Beranda</a>
+                <a href="tentang.html" data-lang-key="about">Tentang Kami</a>
+                <a href="kontak.html" data-lang-key="contact">Kontak</a>
+                <a href="pasang_loker.html" class="active" data-lang-key="post_job">Pasang Loker</a>
+                <button id="lang-switch" onclick="toggleLanguage()" style="
+                    background: #f8f9fa; border: 1px solid #ccc; padding: 5px 10px; margin-left: 15px; border-radius: 5px; cursor: pointer; color: #007bff; font-weight: bold;
+                ">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1 data-lang-key="post_h1">Pasang Lowongan Kerja di WorkLance ID</h1>
+        <p data-lang-key="post_p">Jangkau talenta terbaik untuk perusahaan Anda dengan cepat dan mudah.</p>
+    </header>
+
+    <main class="container job-post-container">
+        <div class="form-card">
+            <h2 data-lang-key="guide_h2">Panduan Singkat</h2>
+            <p data-lang-key="guide_p" style="margin-bottom: 25px;">Mohon isi formulir di bawah ini dengan informasi yang lengkap dan akurat. Notifikasi lowongan akan dikirimkan ke WhatsApp admin kami untuk ditinjau dan ditayangkan di beranda.</p>
+
+            <h2 data-lang-key="form_title">Formulir Pemasangan Lowongan</h2>
+            
+            <form id="loker-form" onsubmit="event.preventDefault(); sendToWhatsApp();">
+
+                <h3 data-lang-key="section1_h3">1. Informasi Perusahaan</h3>
+                <div class="form-group">
+                    <label for="nama_perusahaan" data-lang-key="label_company">Nama Perusahaan (Wajib):</label>
+                    <input type="text" id="nama_perusahaan" required>
+                </div>
+                <div class="form-group">
+                    <label for="email_rekrutmen" data-lang-key="label_email_recruit">Email Rekrutmen (Wajib):</label>
+                    <input type="email" id="email_rekrutmen" required>
+                </div>
+
+                <h3 data-lang-key="section2_h3">2. Detail Pekerjaan</h3>
+                <div class="form-group">
+                    <label for="posisi" data-lang-key="label_position">Nama Posisi (Wajib):</label>
+                    <input type="text" id="posisi" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipe_kerja" data-lang-key="label_type">Tipe Kerja (Wajib):</label>
+                    <select id="tipe_kerja" required>
+                        <option value="" disabled selected data-lang-key="option_default_type">-- Pilih Tipe --</option>
+                        <option value="Full-Time" data-lang-key="option_fulltime">Full-Time</option>
+                        <option value="Part-Time" data-lang-key="option_parttime">Part-Time</option>
+                        <option value="Internship" data-lang-key="option_internship">Internship</option>
+                        <option value="Freelance" data-lang-key="option_freelance">Freelance</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lokasi_kerja" data-lang-key="label_location">Lokasi Kerja (Wajib):</label>
+                    <input type="text" id="lokasi_kerja" required>
+                </div>
+                <div class="form-group">
+                    <label for="gaji" data-lang-key="label_salary">Perkiraan Rentang Gaji (Opsional):</label>
+                    <input type="text" id="gaji" placeholder="Contoh: Rp 5.000.000 - 7.000.000">
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi" data-lang-key="label_description">Deskripsi Pekerjaan (Tugas & Tanggung Jawab) (Wajib):</label>
+                    <textarea id="deskripsi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="persyaratan" data-lang-key="label_requirements">Persyaratan/Kualifikasi (Wajib):</label>
+                    <textarea id="persyaratan" required></textarea>
+                </div>
+
+                <h3 data-lang-key="section3_h3">3. Tag dan Kategori (Opsional)</h3>
+                <div class="form-group">
+                    <label for="tags" data-lang-key="label_tags">Kata Kunci / Tag Lowongan (Pisahkan dengan koma):</label>
+                    <input type="text" id="tags" placeholder="Contoh: JavaScript, Frontend, Figma, Remote Friendly">
+                </div>
+                
+                <button type="submit" class="publish-button" data-lang-key="publish_button">Terbitkan Lowongan</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">&copy; 2025 WorkLance ID | Tugas Kelompok Mata Kuliah Web Development</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

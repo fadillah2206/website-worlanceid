@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - WorkLance ID</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya Kritis untuk Memuat Gambar Latar di Header */
+        .main-header {
+            background-image: url('web.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+            padding: 40px 0;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-info, .contact-form-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form-card {
+            flex: 2;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 3px solid #007bff;
+            background-color: #f8f9fa;
+        }
+
+        .info-item h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .send-wa-button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .send-wa-button:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">WorkLance ID</a>
+            <div class="nav-links">
+                <a href="index.html" data-lang-key="home">Beranda</a>
+                <a href="tentang.html" data-lang-key="about">Tentang Kami</a>
+                <a href="kontak.html" class="active" data-lang-key="contact">Kontak</a>
+                <a href="pasang_loker.html" data-lang-key="post_job">Pasang Loker</a>
+                <button id="lang-switch" onclick="toggleLanguage()" style="
+                    background: #f8f9fa; border: 1px solid #ccc; padding: 5px 10px; margin-left: 15px; border-radius: 5px; cursor: pointer; color: #007bff; font-weight: bold;
+                ">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1 data-lang-key="contact_h1">Hubungi Tim WorkLance ID</h1>
+        <p data-lang-key="contact_p">Kami siap membantu pertanyaan terkait karir, lowongan, dan kerjasama.</p>
+    </header>
+
+    <main class="container contact-container">
+        
+        <section class="contact-info">
+            <h2 data-lang-key="contact_info_h2">Informasi Kontak</h2>
+            <p data-lang-key="contact_info_p">Jika Anda memiliki pertanyaan spesifik tentang lowongan, kemitraan, atau pengembangan proyek, silakan gunakan formulir ini atau hubungi kami secara langsung.</p>
+
+            <div class="info-item">
+                <h4 data-lang-key="phone_title">📞 Telepon/WhatsApp</h4>
+                <p>
+                    <a href="https://wa.me/6281385285889?text=👋%20Halo%20Admin%20WorkLance%20ID.%20Saya%20membutuhkan%20bantuan%20terkait%20informasi%20di%20portal%20Anda.%0A%0AMohon%20pilih%20salah%20satu%20menu%20di%20bawah%20ini%20(ketik%20angka%201-4)%3A%0A%0A------------------------------%0A1.%20%F0%9F%93%89%20Tanya%20Lowongan%20Kerja%20Terbaru%0A2.%20%F0%9F%94%84%20Cek%20Status%20Lowongan%20yang%20Sudah%20Diajukan%0A3.%20%F0%9F%A4%9D%20Penawaran%20Kerjasama%20%2F%20Bisnis%0A4.%20%E2%9D%93%20Pertanyaan%20Lain%0A------------------------------%0A%0ATerima%20kasih." target="_blank" style="text-decoration: none; color: inherit;">
+                        +62 813-8528-5889 (Admin Ahmad Fadillah)
+                    </a>
+                </p>
+            </div>
+
+            <div class="info-item">
+                <h4 data-lang-key="address_title">📍 Alamat Kantor</h4>
+                <p data-lang-key="address_text">Jalan Puspitek Tangerang Selatan</p>
+            </div>
+
+            <div class="info-item">
+                <h4 data-lang-key="email_title">📧 Dukungan Email</h4>
+                <p>support@worklance.id</p>
+                <p>ahmadfadillah@worklance.id (Untuk urusan bisnis)</p>
+            </div>
+        </section>
+
+        <section class="contact-form-card">
+            <h2 data-lang-key="send_message_h2">Kirim Pesan kepada Kami</h2>
+            <form id="contact-form" onsubmit="event.preventDefault(); sendContactFormToWA();">
+                <div class="form-group">
+                    <label for="contactName" data-lang-key="label_full_name">Nama Lengkap:</label>
+                    <input type="text" id="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail" data-lang-key="label_your_email">Email Anda:</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject" data-lang-key="label_subject">Subjek:</label>
+                    <input type="text" id="contactSubject">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage" data-lang-key="label_your_message">Pesan Anda:</label>
+                    <textarea id="contactMessage" required></textarea>
+                </div>
+                <button type="submit" class="send-wa-button" data-lang-key="send_wa_button">Kirim Pesan via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">&copy; 2025 WorkLance ID | Tugas Kelompok Mata Kuliah Web Development</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

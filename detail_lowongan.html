@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="detail_title">Detail Lowongan - WorkLance ID</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya Kritis untuk Memuat Gambar Latar di Header */
+        .main-header {
+            background-image: url('web.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+            padding: 40px 0;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* Gaya Khusus untuk Halaman Detail */
+        .job-detail-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .job-detail-card h1 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        
+        .job-detail-card .company-name {
+            font-size: 1.1em;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border: 1px solid #e9ecef;
+        }
+
+        .meta-item {
+            text-align: center;
+            flex: 1;
+            padding: 0 10px;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .meta-item:last-child {
+            border-right: none;
+        }
+
+        .meta-item label {
+            display: block;
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .meta-item span {
+            font-size: 1em;
+            color: #007bff;
+        }
+        
+        .detail-section h3 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .job-tags {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .apply-button-large {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .apply-button-large:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">WorkLance ID</a>
+            <div class="nav-links">
+                <a href="index.html" data-lang-key="home">Beranda</a>
+                <a href="tentang.html" data-lang-key="about">Tentang Kami</a>
+                <a href="kontak.html" data-lang-key="contact">Kontak</a>
+                <a href="pasang_loker.html" data-lang-key="post_job">Pasang Loker</a>
+                <button id="lang-switch" onclick="toggleLanguage()" style="
+                    background: #f8f9fa; border: 1px solid #ccc; padding: 5px 10px; margin-left: 15px; border-radius: 5px; cursor: pointer; color: #007bff; font-weight: bold;
+                ">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1 id="detail-position">Memuat Detail Lowongan...</h1>
+        <p id="detail-company">Silakan tunggu sebentar.</p>
+    </header>
+
+    <main class="container">
+        <div class="job-detail-card">
+            
+            <h1 id="detail-position-card"></h1>
+            <p class="company-name" id="detail-company-card"></p>
+            
+            <div class="meta-info">
+                <div class="meta-item">
+                    <label data-lang-key="detail_type">Tipe Kerja:</label>
+                    <span id="detail-type">...</span>
+                </div>
+                <div class="meta-item">
+                    <label>Lokasi:</label>
+                    <span id="detail-location">...</span>
+                </div>
+                <div class="meta-item">
+                    <label data-lang-key="detail_level">Level Karir:</label>
+                    <span id="detail-level">...</span>
+                </div>
+                <div class="meta-item">
+                    <label data-lang-key="detail_salary">Estimasi Gaji:</label>
+                    <span id="detail-salary">...</span>
+                </div>
+            </div>
+
+            <div class="job-tags" id="detail-tags">
+                </div>
+
+            <div class="detail-section">
+                <h3 data-lang-key="detail_description_h3">Deskripsi Pekerjaan</h3>
+                <p id="detail-description">...</p>
+            </div>
+
+            <div class="detail-section">
+                <h3 data-lang-key="detail_requirements_h3">Persyaratan & Kualifikasi</h3>
+                <p id="detail-requirements">...</p>
+            </div>
+
+            <a href="#" id="apply-link" class="apply-button-large" target="_blank" data-lang-key="apply_now_large">Lamar Sekarang</a>
+            
+            <a href="index.html" class="back-link">← Kembali ke Daftar Lowongan</a>
+        </div>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">&copy; 2025 WorkLance ID | Tugas Kelompok Mata Kuliah Web Development</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

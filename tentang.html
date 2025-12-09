@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - WorkLance ID</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Gaya Kritis untuk Memuat Gambar Latar di Header --- */
+        .main-header {
+            background-image: url('web.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+            padding: 40px 0;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* --- Gaya Khusus untuk Daftar Anggota Tim --- */
+        .section-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        .section-card h2 {
+            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .member-list {
+            list-style: none;
+            padding: 0;
+        }
+        .member-list li {
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+        }
+        .member-list strong {
+            color: #343a40;
+        }
+        .member-list span {
+            display: block;
+            margin-top: 5px;
+            color: #6c757d;
+        }
+        .section-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        /* Gaya untuk link WA agar terlihat seperti teks biasa, tapi bisa diklik */
+        .wa-link {
+            text-decoration: none;
+            color: inherit; /* Agar warna link mengikuti warna teks normal */
+        }
+        .wa-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">WorkLance ID</a>
+            <div class="nav-links">
+                <a href="index.html" data-lang-key="home">Beranda</a>
+                <a href="tentang.html" class="active" data-lang-key="about">Tentang Kami</a>
+                <a href="kontak.html" data-lang-key="contact">Kontak</a>
+                <a href="pasang_loker.html" data-lang-key="post_job">Pasang Loker</a>
+                <button id="lang-switch" onclick="toggleLanguage()" style="
+                    background: #f8f9fa; 
+                    border: 1px solid #ccc; 
+                    padding: 5px 10px; 
+                    margin-left: 15px; 
+                    border-radius: 5px; 
+                    cursor: pointer;
+                    color: #007bff; 
+                    font-weight: bold;
+                ">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1 data-lang-key="about_h1">Tentang WorkLance ID</h1>
+        <p data-lang-key="about_p">Solusi terdepan untuk menemukan dan mengisi peluang karir di Indonesia.</p>
+    </header>
+
+    <main class="container">
+        <section class="section-card" style="margin-top: 40px;">
+            <h2 data-lang-key="vision_h2">Misi Kami</h2>
+            <p data-lang-key="vision_p">WorkLance ID didirikan dengan misi sederhana: **menjembatani talenta terbaik dengan perusahaan yang tepat**. Kami percaya bahwa setiap orang berhak atas karir yang memuaskan dan setiap perusahaan berhak mendapatkan karyawan yang sesuai dengan kebutuhan mereka. Kami berupaya menyediakan platform yang intuitif, cepat, dan terpercaya.</p>
+        </section>
+
+        <section class="section-card">
+            <h2 data-lang-key="team_h2">Tim Pengembang & Peran Utama</h2>
+            <p data-lang-key="team_p">Proyek portal lowongan kerja statis ini dikembangkan sebagai bagian dari tugas akhir mata kuliah Web Development, di mana setiap anggota memegang peran kunci:</p>
+            
+            <ul class="member-list">
+                <li>
+                    <strong>Ahmad Fadillah</strong> (NIM: 231011400490)
+                    <span data-lang-key="ahmad_role_id">
+                        **Peran:** 👑 **The Architect & Logic Integrator**
+                        <br>
+                        Tanggung jawab meliputi: Memimpin proyek, merancang struktur web keseluruhan, dan mengimplementasikan fitur kritis seperti **Notifikasi WhatsApp Admin** dan integrasi alur kerja simulasi Lowongan.
+                    </span>
+                    <span data-lang-key="ahmad_role_en" style="display: none;">
+                        **Role:** 👑 **The Architect & Logic Integrator**
+                        <br>
+                        Responsibilities include: Leading the project, designing the overall web structure, and implementing critical features like **Admin WhatsApp Notifications** and simulated Job Vacancy workflow integration.
+                    </span>
+                    <br>
+                    No. Telepon: 
+                    <a href="https://wa.me/6281385285889" id="wa-link-ahmad" target="_blank" class="wa-link">081385285889</a>
+                </li>
+                <li>
+                    <strong>Defry Sulaeman</strong> (NIM: 231011400477)
+                    <span data-lang-key="defry_role_id">
+                        **Peran:** 🎨 **The Visual Designer & Stylist**
+                        <br>
+                        Tanggung jawab meliputi: Mendesain pengalaman pengguna (UX) yang menarik, menata semua gaya visual melalui **CSS** *styling*, dan membangun *layout* halaman *About* dan *Contact* yang bersih dan informatif.
+                    </span>
+                    <span data-lang-key="defry_role_en" style="display: none;">
+                        **Role:** 🎨 **The Visual Designer & Stylist**
+                        <br>
+                        Responsibilities include: Designing engaging user experience (UX), styling all visual elements via **CSS** *styling*, and building clean and informative *About* and *Contact* page layouts.
+                    </span>
+                    <br>
+                    No. Telepon: 
+                    <a href="https://wa.me/6282258722610" id="wa-link-defry" target="_blank" class="wa-link">082258722610</a>
+                </li>
+                <li>
+                    <strong>Alif Azhar</strong> (NIM: 231011402879)
+                    <span data-lang-key="alif_role_id">
+                        **Peran:** ⚙️ **The Functionality Engine**
+                        <br>
+                        Tanggung jawab meliputi: Mengembangkan semua fungsionalitas **JavaScript** inti seperti fitur **Pencarian Cepat**, merancang alur pengiriman dan penerimaan Lowongan Kerja (`pasang_loker.html`), serta memastikan halaman *Detail Lowongan* berfungsi secara dinamis.
+                    </span>
+                    <span data-lang-key="alif_role_en" style="display: none;">
+                        **Role:** ⚙️ **The Functionality Engine**
+                        <br>
+                        Responsibilities include: Developing all core **JavaScript** functionalities like the **Quick Search** feature, designing the Job Posting submission and reception flow (`pasang_loker.html`), and ensuring the *Job Detail* page functions dynamically.
+                    </span>
+                    <br>
+                    No. Telepon: 
+                    <a href="https://wa.me/628997484380" id="wa-link-alif" target="_blank" class="wa-link">08997484380</a>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="section-card">
+            <h2 data-lang-key="tech_h2">Teknologi yang Digunakan</h2>
+            <p data-lang-key="tech_p">Website ini dikembangkan menggunakan teknologi front-end standar:</p>
+            <ul>
+                <li><strong>HTML5:</strong> Untuk struktur konten.</li>
+                <li><strong>CSS3:</strong> Untuk gaya dan desain visual.</li>
+                <li><strong>JavaScript (ES6):</strong> Untuk fungsionalitas dinamis seperti pencarian, navigasi, dan simulasi pengiriman lowongan.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">&copy; 2025 WorkLance ID | Tugas Kelompok Mata Kuliah Web Development</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

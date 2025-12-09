@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkLance ID - Portal Lowongan Kerja</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya ini berfungsi untuk memasukkan web.jpg sebagai latar belakang header */
+        .main-header {
+            background-image: url('web.jpg'); /* PENTING: Memanggil gambar Anda */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Agar teks di atas gambar jelas */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Tambahan shadow agar teks lebih jelas */
+            padding: 80px 0; /* Memberi ruang padding yang cukup */
+            min-height: 400px; /* Minimal tinggi header */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .main-header p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-top: -60px; /* Mengangkat search bar ke atas header */
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">WorkLance ID</a>
+            <div class="nav-links">
+                <a href="index.html" class="active" data-lang-key="home">Beranda</a>
+                <a href="tentang.html" data-lang-key="about">Tentang Kami</a>
+                <a href="kontak.html" data-lang-key="contact">Kontak</a>
+                <a href="pasang_loker.html" data-lang-key="post_job">Pasang Loker</a>
+                <button id="lang-switch" onclick="toggleLanguage()" style="
+                    background: #f8f9fa; 
+                    border: 1px solid #ccc; 
+                    padding: 5px 10px; 
+                    margin-left: 15px; 
+                    border-radius: 5px; 
+                    cursor: pointer;
+                    color: #007bff; 
+                    font-weight: bold;
+                ">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1 data-lang-key="hero_h1">Temukan Karir Impian Anda Sekarang Juga</h1>
+        <p data-lang-key="hero_p">Ribuan peluang kerja menanti untuk Anda jelajahi.</p>
+        <p style="font-size: 0.9em; margin-top: -10px;" data-lang-key="illustration_text">💡 Ilustrasi sukses mencari kerja</p>
+    </header>
+
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" onkeyup="filterJobs()" placeholder="Cari posisi, perusahaan, atau lokasi..." style="flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;">
+            <button onclick="filterJobs()" class="search-button" data-lang-key="search_button">Cari Kerja</button>
+        </div>
+
+        <section class="job-listing-section">
+            <h2 data-lang-key="latest_jobs_h2" style="margin-top: 50px;">Lowongan Terbaru untuk Anda</h2>
+            
+            <div class="job-list" id="job-list">
+                </div>
+
+            <p id="no-results" style="display: none; text-align: center; color: #6c757d; margin-top: 30px;" data-lang-key="no_results">Tidak ada lowongan yang ditemukan. Coba kata kunci lain.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">&copy; 2025 WorkLance ID | Tugas Kelompok Mata Kuliah Web Development</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
