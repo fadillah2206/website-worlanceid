@@ -95,7 +95,7 @@ const jobData = [
         description: "Melaksanakan tugas-tugas administratif dan dokumentasi perusahaan\nMengelola dan mengarsip dokumen penting secara rapi dan terorganisir\nMembuat laporan administrasi harian, bulanan, dan tahunan\nMelayani komunikasi masuk dan keluar, termasuk surat-murat dan telepon\nMendukung kegiatan operasional kantor dan tim terkait",
         requirements: "Pendidikan minimal SMA/SMK atau sederajat, lebih diutamakan D3/S1 Administrasi atau terkait\nPengalaman kerja di bidang administratif minimal 1 tahun (nilai tambah)\nMenguasai Microsoft Office (Word, Excel, PowerPoint)\nMemiliki kemampuan komunikasi yang baik dan teliti\nMampu bekerja secara mandiri maupun dalam tim\nJujur, disiplin, dan bertanggung jawab",
         tags: ["Full-Time", "Entry Level", "Administrasi", "Dokumen", "Teliti"],
-        applyLink: "mailto:emas23@gmail.com?subject=Lamaran%20Posisi%20Admin",
+        applyLink: "mailto:fadillaha131@gmail.com?subject=Lamaran%20Posisi%20Admin",
         desc_en: "Perform administrative duties and company documentation.\nManage and archive important documents neatly and organized.\nCreate daily, monthly, and annual administrative reports.\nHandle incoming and outgoing communication, including correspondence and telephone.\nSupport office operational activities and related teams.",
         req_en: "Minimum education SMA/SMK or equivalent, D3/S1 in Administration or related field is preferred.\nMinimum 1 year work experience in administration (a plus).\nProficient in Microsoft Office (Word, Excel, PowerPoint).\nHave good communication and attention to detail.\nAble to work independently and in a team.\nHonest, disciplined, and responsible.",
     },
